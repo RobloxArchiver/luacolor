@@ -21,7 +21,7 @@ function luacolor.bold(text)
 end
 
 function luacolor.italic(text)
-	return ascii_encode("3". text)
+	return ascii_encode("3", text)
 end
 
 function luacolor.underline(text)
@@ -30,6 +30,10 @@ end
 
 function luacolor.black(text)
 	return ascii_encode("30", text)
+end
+
+function luacolor.black_bold(text)
+	return ascii_encode("30;1", text)
 end
 
 function luacolor.red(text)
@@ -44,24 +48,48 @@ function luacolor.green(text)
 	return ascii_encode("32", text)
 end
 
+function luacolor.green_bold(text)
+	return ascii_encode("32;1", text)
+end
+
 function luacolor.yellow(text)
 	return ascii_encode("33", text)
+end
+
+function luacolor.yellow(text)
+	return ascii_encode("33;1", text)
 end
 
 function luacolor.cyan(text)
 	return ascii_encode("34", text)
 end
 
+function luacolor.cyan_bold(text)
+	return ascii_encode("34;1", text)
+end
+
 function luacolor.magenta(text)
 	return ascii_encode("35", text)
+end
+
+function luacolor.magenta_bold(text)
+	return ascii_encode("35;1", text)
 end
 
 function luacolor.blue(text)
 	return ascii_encode("36", text)
 end
 
+function luacolor.blue_bold(text)
+	return ascii_encode("36;1", text)
+end
+
 function luacolor.white(text)
 	return ascii_encode("37", text)
+end
+
+function luacolor.white_bold(text)
+	return ascii_encode("37;1", text)
 end
 
 return luacolor
