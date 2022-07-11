@@ -56,7 +56,7 @@ function luacolor.yellow(text)
 	return ascii_encode("33", text)
 end
 
-function luacolor.yellow(text)
+function luacolor.yellow_bold(text)
 	return ascii_encode("33;1", text)
 end
 
