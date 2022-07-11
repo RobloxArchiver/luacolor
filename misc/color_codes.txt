@@ -1,0 +1,46 @@
+1 = Bold
+2 = Grey
+3 = Italic
+4 = Underscore
+7 = White Background
+8 = Invisible
+9 = Strike
+21 = Underscore
+
+30 = Black
+31 = Red
+32 = Green
+33 = Yellow
+34 = Cyan
+35 = Magenta
+36 = Blue
+37 = White?
+
+40 = Black Background
+41 = Red Background
+42 = Green Background
+43 = Yellow Background
+44 = Cyan Background
+45 = Magenta Background
+46 = Blue Background
+47 = White Background
+
+90 = Light Black
+91 = Light Red
+92 = Light Green
+93 = Light Yellow
+94 = Light Cyan
+95 = Light Magenta
+96 = Light Blue
+97 =  "light" white
+
+100  = Light Gray Background
+101 = Light Red Background
+102 = Light Green Background
+103 = Light Yellow Background
+104 = Light Cyan Background
+105 = Light Magenta Background
+106 = Light Blue Background
+107 = "Light" White Background
+
+Note: When I got these I was using Repl as my PC was broken. The script provided is the script used (getColors)
