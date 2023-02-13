@@ -88,8 +88,4 @@ function luacolor.white(text)
     return ascii_encode("37", text)
 end
 
-function luacolor.white_bold(text)
-    return ascii_encode("37;1", text)
-end
-
 return luacolor
