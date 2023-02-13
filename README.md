@@ -1,2 +1,1 @@
-# luacolor
-Colors for Lua Printing. Made with 5.1 in mind.
+# [Demo](https://replit.com/@RobloxArchiver/luacolordemo?v=1)
