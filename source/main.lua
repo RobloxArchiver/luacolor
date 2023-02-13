@@ -1,4 +1,5 @@
 local luacolor = {}
+luacolor["bold"] = {}
 
 local function ascii_encode(color_code, text)
     local color_code = tostring(color_code) or "0"
