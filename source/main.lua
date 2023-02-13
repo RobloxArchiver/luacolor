@@ -1,11 +1,10 @@
 local luacolor = {}
 
 local function ascii_encode(color_code, text)
-    local color_code = tostring(color_code) or "0m"
-    local text = tostring(text)
-    local new_text = "\27[" .. color_code .. "m" .. text
+    local color_code = tostring(color_code) or "0"
+    local formatted_text = string.format("\27[%sm%s\27[0m", color_code, tostring(text))
 
-    return new_text .. "\27[0m"
+    return formatted_text
 end
 
 function luacolor.custom(code, text)
@@ -14,10 +13,6 @@ end
 
 function luacolor.reset(text)
     return ascii_encode("0", text)
-end
-
-function luacolor.bold(text)
-    return ascii_encode("1", text)
 end
 
 function luacolor.italic(text)
@@ -32,60 +27,60 @@ function luacolor.black(text)
     return ascii_encode("30", text)
 end
 
-function luacolor.black_bold(text)
-    return ascii_encode("30;1", text)
-end
-
 function luacolor.red(text)
     return ascii_encode("31", text)
-end
-
-function luacolor.red_bold(text)
-    return ascii_encode("31;1", text)
 end
 
 function luacolor.green(text)
     return ascii_encode("32", text)
 end
 
-function luacolor.green_bold(text)
-    return ascii_encode("32;1", text)
-end
-
 function luacolor.yellow(text)
     return ascii_encode("33", text)
-end
-
-function luacolor.yellow_bold(text)
-    return ascii_encode("33;1", text)
 end
 
 function luacolor.cyan(text)
     return ascii_encode("34", text)
 end
 
-function luacolor.cyan_bold(text)
-    return ascii_encode("34;1", text)
-end
-
 function luacolor.magenta(text)
     return ascii_encode("35", text)
-end
-
-function luacolor.magenta_bold(text)
-    return ascii_encode("35;1", text)
 end
 
 function luacolor.blue(text)
     return ascii_encode("36", text)
 end
 
-function luacolor.blue_bold(text)
+function luacolor.white(text)
+    return ascii_encode("37", text)
+end
+
+function luacolor.bold.red(text)
+    return ascii_encode("31;1", text)
+end
+
+function luacolor.bold.green(text)
+    return ascii_encode("32;1")
+end
+
+function luacolor.bold.yellow(text)
+    return ascii_encode("33;1", text) 
+end
+
+function luacolor.bold.cyan(text)
+    return ascii_encode("34;1", text) 
+end
+
+function luacolor.bold.magenta(text)
+    return ascii_encode("35;1", text) 
+end
+
+function luacolor.bold.blue(text)
     return ascii_encode("36;1", text)
 end
 
-function luacolor.white(text)
-    return ascii_encode("37", text)
+function luacolor.bold.white(text)
+    return ascii_encode("37;1", text)
 end
 
 return luacolor
